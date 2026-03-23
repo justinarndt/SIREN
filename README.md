@@ -37,42 +37,16 @@ to `p`, while the FFT/IFFT operations maintain the same expressive mixing of fea
 ## Architecture
 
 ```mermaid
-graph TB
-    subgraph INPUT["Input Pipeline"]
-        TOK["Token IDs<br/>(batch, seq_len)"]
-        EMB["Embedding Layer<br/>(vocab x d_model, dense)"]
-        TOK --> EMB
-    end
+graph LR
+    TOK["Tokens"] --> EMB["Embedding"] --> N1["RMSNorm"] --> MHA["Circulant MHA"] --> R1["+"] --> N2["RMSNorm"] --> FFN["Circulant SwiGLU"] --> R2["+"] --> OUT["RMSNorm + LM Head"]
+    R1 -.->|residual| R1
+    R2 -.->|residual| R2
+    N1 -.- |"x N layers"| R2
 
-    subgraph BLOCK["Transformer Block (x N layers)"]
-        direction TB
-        NORM1["RMSNorm"]
-        MHA["Circulant Multi-Head Attention"]
-        RES1["Residual Add"]
-        NORM2["RMSNorm"]
-        FFN["Circulant SwiGLU FFN"]
-        RES2["Residual Add"]
-
-        NORM1 --> MHA --> RES1
-        NORM2 --> FFN --> RES2
-    end
-
-    subgraph OUTPUT["Output"]
-        FNORM["RMSNorm"]
-        PROJ["Output Projection<br/>(weight-tied to embedding)"]
-        LOGITS["Logits<br/>(batch, seq_len, vocab)"]
-        FNORM --> PROJ --> LOGITS
-    end
-
-    EMB --> BLOCK
-    RES1 --> NORM2
-    RES2 --> FNORM
-
-    style INPUT fill:#161b22,stroke:#30363d,color:#c9d1d9
-    style BLOCK fill:#1c2333,stroke:#58a6ff,color:#c9d1d9
-    style OUTPUT fill:#161b22,stroke:#30363d,color:#c9d1d9
     style MHA fill:#0d419d,stroke:#58a6ff,color:#c9d1d9
     style FFN fill:#0d419d,stroke:#58a6ff,color:#c9d1d9
+    style EMB fill:#161b22,stroke:#30363d,color:#c9d1d9
+    style OUT fill:#161b22,stroke:#30363d,color:#c9d1d9
 ```
 
 ### Circulant Layer Detail
@@ -123,7 +97,7 @@ SIREN models are designed to run on Apple Neural Engine via CoreML.
 The ANE power model estimates real-world battery impact.
 
 <p align="center">
-  <img src="docs/battery_life.svg" width="750" alt="Battery life comparison on iPhone 16 Pro"/>
+  <img src="docs/battery_life.svg" width="750" alt="Estimated power draw comparison: Dense GPU vs SIREN ANE"/>
 </p>
 
 <p align="center">

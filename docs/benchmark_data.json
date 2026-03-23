@@ -1,0 +1,114 @@
+{
+  "Tiny (50M)": {
+    "dense_params": 52035584,
+    "cste_params": 16691712,
+    "compression": 3.117450384957517,
+    "dense_gb": 0.104071168,
+    "cste_mb": 8.345856,
+    "cste_latency_ms": 0.07707033600000002,
+    "cste_tps": 12975.16076743197,
+    "cste_power_mw": 0.22,
+    "cste_power_w": 0.0,
+    "dense_power_w": 0.0,
+    "cste_battery_h": 200,
+    "dense_battery_h": 200,
+    "cste_fits_sram": false,
+    "n_circ_layers": 42,
+    "lat_bottleneck": "compute"
+  },
+  "Small (200M)": {
+    "dense_params": 217317376,
+    "cste_params": 33997824,
+    "compression": 6.392096623595675,
+    "dense_gb": 0.434634752,
+    "cste_mb": 16.998912,
+    "cste_latency_ms": 0.35232153600000005,
+    "cste_tps": 2838.316417875744,
+    "cste_power_mw": 0.21,
+    "cste_power_w": 0.0,
+    "dense_power_w": 0.0,
+    "cste_battery_h": 200,
+    "dense_battery_h": 200,
+    "cste_fits_sram": false,
+    "n_circ_layers": 84,
+    "lat_bottleneck": "compute"
+  },
+  "Base (750M)": {
+    "dense_params": 607911936,
+    "cste_params": 51918336,
+    "compression": 11.70900269222804,
+    "dense_gb": 1.215823872,
+    "cste_mb": 25.959168,
+    "cste_latency_ms": 0.8506876429002597,
+    "cste_tps": 1175.5196026954006,
+    "cste_power_mw": 0.21,
+    "cste_power_w": 0.0,
+    "dense_power_w": 0.0,
+    "cste_battery_h": 200,
+    "dense_battery_h": 200,
+    "cste_fits_sram": false,
+    "n_circ_layers": 126,
+    "lat_bottleneck": "compute"
+  },
+  "Medium (1.5B)": {
+    "dense_params": 1345323008,
+    "cste_params": 70453248,
+    "compression": 19.095258858754107,
+    "dense_gb": 2.690646016,
+    "cste_mb": 35.226624,
+    "cste_latency_ms": 1.5854469119999999,
+    "cste_tps": 630.7369817501653,
+    "cste_power_mw": 0.21,
+    "cste_power_w": 0.0,
+    "dense_power_w": 0.0,
+    "cste_battery_h": 200,
+    "dense_battery_h": 200,
+    "cste_fits_sram": false,
+    "n_circ_layers": 168,
+    "lat_bottleneck": "compute"
+  },
+  "Large (7B)": {
+    "dense_params": 6712983552,
+    "cste_params": 157028352,
+    "compression": 42.7501369434228,
+    "dense_gb": 13.425967104,
+    "cste_mb": 78.514176,
+    "cste_latency_ms": 8.455716864,
+    "cste_tps": 118.26318407815602,
+    "cste_power_mw": 0.2,
+    "cste_power_w": 0.0,
+    "dense_power_w": 0.0,
+    "cste_battery_h": 200,
+    "dense_battery_h": 200,
+    "cste_fits_sram": false,
+    "n_circ_layers": 224,
+    "lat_bottleneck": "compute"
+  },
+  "_chip_comparison": {
+    "A17 Pro": {
+      "latency_ms": 0.8506876429002597,
+      "tps": 1175.5196026954006,
+      "bottleneck": "compute"
+    },
+    "A18 Pro": {
+      "latency_ms": 0.8506876429002597,
+      "tps": 1175.5196026954006,
+      "bottleneck": "compute"
+    },
+    "M4": {
+      "latency_ms": 0.783528092144976,
+      "tps": 1276.2784257835779,
+      "bottleneck": "compute"
+    },
+    "M4 Pro": {
+      "latency_ms": 0.783528092144976,
+      "tps": 1276.2784257835779,
+      "bottleneck": "compute"
+    },
+    "M5 Pro": {
+      "latency_ms": 0.7089063690835498,
+      "tps": 1410.6235232344804,
+      "bottleneck": "compute"
+    }
+  }
+}

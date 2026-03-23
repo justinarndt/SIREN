@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 380" fill="none">
+  <defs>
+    <linearGradient id="g_d" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f85149" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#f0883e" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="g_c" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#39d2c0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#3fb950" stop-opacity="0.4"/>
+    </linearGradient></defs>
+  <rect width="780" height="380" rx="12" fill="#0d1117"/>
+  <text x="390" y="32" text-anchor="middle" fill="#c9d1d9" font-family="Inter,system-ui,sans-serif" font-size="17" font-weight="600">Model Checkpoint Size</text>
+  <text x="390" y="50" text-anchor="middle" fill="#8b949e" font-family="Inter,system-ui,sans-serif" font-size="11">Dense bf16 vs CSTE 4-bit quantized</text>
+  <line x1="80" y1="310.0" x2="750" y2="310.0" stroke="#21262d" stroke-width="1"/>
+  <text x="74" y="314.0" text-anchor="end" fill="#8b949e" font-family="Inter,system-ui,sans-serif" font-size="10">0 MB</text>
+  <line x1="80" y1="261.0" x2="750" y2="261.0" stroke="#21262d" stroke-width="1"/>
+  <text x="74" y="265.0" text-anchor="end" fill="#8b949e" font-family="Inter,system-ui,sans-serif" font-size="10">2.7 GB</text>
+  <line x1="80" y1="212.0" x2="750" y2="212.0" stroke="#21262d" stroke-width="1"/>
+  <text x="74" y="216.0" text-anchor="end" fill="#8b949e" font-family="Inter,system-ui,sans-serif" font-size="10">5.4 GB</text>
+  <line x1="80" y1="162.99999999999997" x2="750" y2="162.99999999999997" stroke="#21262d" stroke-width="1"/>
+  <text x="74" y="166.99999999999997" text-anchor="end" fill="#8b949e" font-family="Inter,system-ui,sans-serif" font-size="10">8.1 GB</text>
+  <line x1="80" y1="114.0" x2="750" y2="114.0" stroke="#21262d" stroke-width="1"/>
+  <text x="74" y="118.0" text-anchor="end" fill="#8b949e" font-family="Inter,system-ui,sans-serif" font-size="10">10.7 GB</text>
+  <line x1="80" y1="65.0" x2="750" y2="65.0" stroke="#21262d" stroke-width="1"/>
+  <text x="74" y="69.0" text-anchor="end" fill="#8b949e" font-family="Inter,system-ui,sans-serif" font-size="10">13.4 GB</text>
+  <rect x="130" y="308" width="36" height="2" rx="4" fill="url(#g_d)"/>
+  <rect x="176" y="308" width="36" height="2" rx="4" fill="url(#g_c)"/>
+  <text x="171" y="326" text-anchor="middle" fill="#8b949e" font-family="Inter,system-ui,sans-serif" font-size="10">Tiny</text>
+  <text x="148" y="303" text-anchor="middle" fill="#f85149" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600">104MB</text>
+  <text x="194" y="303" text-anchor="middle" fill="#39d2c0" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600">8MB</text>
+  <rect x="252" y="302.06868947204" width="36" height="7.9313105279600125" rx="4" fill="url(#g_d)"/>
+  <rect x="298" y="308" width="36" height="2" rx="4" fill="url(#g_c)"/>
+  <text x="293" y="326" text-anchor="middle" fill="#8b949e" font-family="Inter,system-ui,sans-serif" font-size="10">Small</text>
+  <text x="270" y="297.06868947204" text-anchor="middle" fill="#f85149" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600">435MB</text>
+  <text x="316" y="303" text-anchor="middle" fill="#39d2c0" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600">17MB</text>
+  <rect x="374" y="287.8133786316776" width="36" height="22.186621368322403" rx="4" fill="url(#g_d)"/>
+  <rect x="420" y="308" width="36" height="2" rx="4" fill="url(#g_c)"/>
+  <text x="415" y="326" text-anchor="middle" fill="#8b949e" font-family="Inter,system-ui,sans-serif" font-size="10">Base</text>
+  <text x="392" y="282.8133786316776" text-anchor="middle" fill="#f85149" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600">1.2GB</text>
+  <text x="438" y="303" text-anchor="middle" fill="#39d2c0" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600">26MB</text>
+  <rect x="496" y="260.9004998437988" width="36" height="49.09950015620119" rx="4" fill="url(#g_d)"/>
+  <rect x="542" y="308" width="36" height="2" rx="4" fill="url(#g_c)"/>
+  <text x="537" y="326" text-anchor="middle" fill="#8b949e" font-family="Inter,system-ui,sans-serif" font-size="10">Medium</text>
+  <text x="514" y="255.9004998437988" text-anchor="middle" fill="#f85149" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600">2.7GB</text>
+  <text x="560" y="303" text-anchor="middle" fill="#39d2c0" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600">35MB</text>
+  <rect x="618" y="65.0" width="36" height="245.0" rx="4" fill="url(#g_d)"/>
+  <rect x="664" y="308" width="36" height="2" rx="4" fill="url(#g_c)"/>
+  <text x="659" y="326" text-anchor="middle" fill="#8b949e" font-family="Inter,system-ui,sans-serif" font-size="10">Large</text>
+  <text x="636" y="60.0" text-anchor="middle" fill="#f85149" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600">13.4GB</text>
+  <text x="682" y="303" text-anchor="middle" fill="#39d2c0" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="600">79MB</text>
+  <rect x="570" y="65" width="12" height="12" rx="3" fill="#f85149"/>
+  <text x="588" y="75" fill="#c9d1d9" font-family="Inter,system-ui,sans-serif" font-size="11">Dense (bf16)</text>
+  <rect x="670" y="65" width="12" height="12" rx="3" fill="#39d2c0"/>
+  <text x="688" y="75" fill="#c9d1d9" font-family="Inter,system-ui,sans-serif" font-size="11">CSTE (4-bit)</text>
+</svg>

@@ -38,16 +38,22 @@ to `p`, while the FFT/IFFT operations maintain the same expressive mixing of fea
 
 ```mermaid
 graph LR
-    TOK["Tokens"] --> EMB["Embedding"] --> N1["RMSNorm"] --> MHA["Circulant MHA"] --> R1["+"] --> N2["RMSNorm"] --> FFN["Circulant SwiGLU"] --> R2["+"] --> OUT["RMSNorm + LM Head"]
-    R1 -.->|residual| R1
-    R2 -.->|residual| R2
-    N1 -.- |"x N layers"| R2
+    TOK["Tokens"] --> EMB["Embedding"]
+    EMB --> N1["RMSNorm"]
+    N1 --> MHA["Circulant MHA"]
+    MHA --> R1["+"]
+    R1 --> N2["RMSNorm"]
+    N2 --> FFN["Circulant SwiGLU"]
+    FFN --> R2["+"]
+    R2 --> OUT["RMSNorm + LM Head"]
 
     style MHA fill:#0d419d,stroke:#58a6ff,color:#c9d1d9
     style FFN fill:#0d419d,stroke:#58a6ff,color:#c9d1d9
     style EMB fill:#161b22,stroke:#30363d,color:#c9d1d9
     style OUT fill:#161b22,stroke:#30363d,color:#c9d1d9
 ```
+
+*The "Circulant MHA" and "Circulant SwiGLU" blocks repeat N times (6-32 layers depending on config), each with residual connections.*
 
 ### Circulant Layer Detail
 
